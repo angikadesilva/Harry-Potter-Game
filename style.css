@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background: url('images/background-img.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.harry { /* Changed from .bird to .harry */
+    height: 200px;  /* Increased height */
+    width: 260px;   /* Increased width */
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    z-index: 100;
+}
+
+.pipe_sprite {
+    position: fixed;
+    top: 40vh;
+    left: 100vw;
+    height: 60vh;  /* Reduced height of the pipe */
+    width: 4vw;    /* Reduced width of the pipe */
+    background: radial-gradient(rgb(242, 231, 130) 50%, rgb(170, 159, 2));
+    border: 5px solid black;
+}
+
+.message {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    top: 30%;
+    left: 50%;
+    font-size: 4em;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.messageStyle {
+    background: rgb(230, 228, 228);
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.score {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 10vh;
+    font-weight: 100;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.score_val {
+    color: gold;
+    font-weight: bold;
+}
+
+/* Mute button styles */
+.mute-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 4em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 1080px) {
+    .message {
+        font-size: 50px;
+        top: 50%;
+        white-space: nowrap;
+    }
+    .score {
+        font-size: 8vh;
+    }
+    .harry { /* Adjusted class name to .harry */
+        width: 150px;  /* Adjusted for smaller screens */
+        height: 200px; /* Adjusted for smaller screens */
+    }
+    .pipe_sprite {
+        width: 12vw;  /* Adjusted pipe width for smaller screens */
+        height: 50vh; /* Adjusted pipe height for smaller screens */
+    }
+}
